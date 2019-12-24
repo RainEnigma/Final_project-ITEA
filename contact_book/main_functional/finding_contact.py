@@ -15,7 +15,6 @@ def finding_obj(word):
         clarification_word = input(
             f"There are {len(list_rows_with_similar)} same contacts, please enter another word:")
         for num in list_rows_with_similar:
-            print(clarification_word)
             if clarification_word in dict(o_dict_contacts[num]).values():
                 print()
                 for my_key,my_value in dict(o_dict_contacts[num]).items():

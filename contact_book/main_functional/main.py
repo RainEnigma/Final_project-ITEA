@@ -1,5 +1,5 @@
 import file_operstions, input_contact,finding_contact
-import CONSTANCE
+import constance
 
 
 def main():
@@ -19,7 +19,7 @@ def main():
                     print(f"{key} - {value}")
 
         elif inputed_letter.lower() == "a":
-            input_contact.add_contact(CONSTANCE.file_name, CONSTANCE.file_extention)
+            input_contact.add_contact(constance.FILE_NAME, constance.FILE_EXTENTION)
 
         elif inputed_letter.lower() == "f":
             finding_contact.finding_obj(input("Please print what to search: "))

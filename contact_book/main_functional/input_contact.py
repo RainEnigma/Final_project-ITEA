@@ -2,9 +2,7 @@ import string
 import file_operstions
 
 
-# ------------- THIS FUNCTION WILL GET INFORMATION FROM USER:
-
-def add_contact(file_name, file_extension):
+def add_contact(file_name, file_extension):  # THIS FUNCTION WILL GET INFORMATION FROM USER:
     file_manager = file_operstions.File(file_name=file_name, file_extention=file_extension)
     contact_list = file_manager.write_file()
     return contact_list
@@ -12,9 +10,9 @@ def add_contact(file_name, file_extension):
 
 # Getting input from user:
 def input_from_user():
-    Temp = 0
+    Temp = True
 
-    while Temp != 1:
+    while Temp != False:
         dict_user_input = {}
 
         # Getting input Name from user:
@@ -36,18 +34,17 @@ def input_from_user():
                 break
             else:
                 print("Please input more than 3 symbols")
-        for_out = 0
         temp = 0
 
         # Getting input Phone number from user:
 
-        while for_out == 0:
+        while True:
             input_Phone = input("Please input phone: ")
             for symbol in input_Phone:
                 if symbol in string.digits or symbol == "+":
                     temp += 1
                 else:
-                    print("Please input just numbers or nothing:")
+                    print("Please input just numbers!")
                     break
             if temp == len(input_Phone):
                 dict_user_input["Phone"] = input_Phone
